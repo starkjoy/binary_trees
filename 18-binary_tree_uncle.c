@@ -1,4 +1,4 @@
-#include "binary_trees.c"
+#include "binary_trees.h"
 
 /**
  * binary_tree_uncle - finds the uncle of a node
