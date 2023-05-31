@@ -16,25 +16,25 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	height = binary_tree_height(tree);
 
-	return (check_perfect_tree(tree, 0, height);
+	return (check_perfect_tree(tree, 0, height));
 }
 
 /**
  * check_perfect_tree - checks if binary tree is perfect
  * @node: pointer to node
  * @level: binary tree level
- * @size: binary tree height
+ * @height: binary tree height
  * Return: Integer
  */
 
 int check_perfect_tree(const binary_tree_t *node, size_t level, size_t height)
 {
 	if (node == NULL)
-		return level == height;
-	
+		return (level == height);
+
 	if (node->left == NULL || node->right == NULL)
 		return (0);
-	
+
 	return (check_perfect_tree(node->left, level + 1, height) &&
-			check_perfect_tree(node->right, level + 1, height);
+			check_perfect_tree(node->right, level + 1, height));
 }
