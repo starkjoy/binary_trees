@@ -7,6 +7,8 @@
  * Return: integer
  */
 
+int check_perfect_tree(const binary_tree_t *node, size_t level, size_t height);
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t height;
